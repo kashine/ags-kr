@@ -153,14 +153,22 @@ h2::before {
     background-color: #01406c;
     position: relative;
 }
-
-.slide {
-    display: block;
-}
-
-.slide-2,
-.slide-3 {
+.slider-controls input[type="radio"] {
     display: none;
+}
+.slider-inner{
+    overflow: hidden;
+}
+.slides{
+    width:300%;
+    transition: transform 0.8s ease;
+
+}
+.slides .slide {
+    display: block;
+    width:960px;
+    height: 330px;
+    float:left;
 }
 
 .slide .lead {
@@ -174,13 +182,11 @@ h2::before {
     color: white;
 }
 
-.slides img {
-    position: absolute;
-    z-index: 1;
-    right: -150px;
-}
 
-.slides .linear-gradient {
+
+
+
+.top-slider .linear-gradient {
     width: 570px;
     height: 330px;
     position: absolute;
@@ -188,17 +194,6 @@ h2::before {
     background-image: linear-gradient(105deg, rgba(20, 117, 184, 0) 20%, rgb(20, 117, 184) 20%, rgb(20, 117, 184) 45%, rgba(20, 117, 184, 0.6) 45%, rgba(20, 117, 184, 0.6) 70%, rgba(20, 117, 184, 0) 70%, rgba(20, 117, 184, 0) 100%);
     background-repeat: no-repeat;
     left: 400px;
-}
-
-.top-slider input[type=radio] {
-    display: none;
-}
-
-
-#first-btn:checked ~ .slides #first,
-#second-btn:checked ~ .slides #second,
-#third-btn:checked ~ .slides #third {
-    display: block;
 }
 
 .slider-controls {
@@ -209,9 +204,7 @@ h2::before {
     top: 290px;
 }
 
-.slider-controls input[type="radio"] {
-    display: none;
-}
+
 
 .slider-controls input[type="radio"] + label::before {
     content: "";
@@ -223,16 +216,21 @@ h2::before {
     border-radius: 50%;
     background: white;
 }
-
-.slider-controls input[type="radio"]:checked + label::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 15px;
-    width: 15px;
+#first-btn:checked + label[for="first-btn"]::before,
+#second-btn:checked + label[for="second-btn"]::before,
+#third-btn:checked + label[for="third-btn"]::before {
     background: #1475b8;
 }
 
+#first-btn:checked ~ .slider-inner .slides {
+    transform:translate(0);
+}
+#second-btn:checked ~ .slider-inner .slides {
+    transform:translate(-960px);
+}
+#third-btn:checked ~ .slider-inner .slider-slides {
+    transform:translate(-1920px);
+}
 /*О нас*/
 
 .about-us {
@@ -247,7 +245,7 @@ h2::before {
 .about-us .about-us-gallery {
     width: 630px;
     height: 430px;
-
+    position: relative;
     border: #01406c solid 10px;
     box-sizing: border-box;
 }
@@ -258,6 +256,63 @@ h2::before {
     font-family: "Open Sans";
 }
 
+.about-us-gallery .arrow-right{
+    width:0;
+    height: 0;
+    position: absolute;
+    top:50%;
+    right:10px;
+    margin-top:-20px;
+    border: 20px solid transparent;
+    border-left:20px solid white;
+    z-index:1;
+}
+
+.about-us-gallery .arrow-right:before{
+    content:"";
+    width:0;
+    height: 0;
+    position: absolute;
+    top:-20px;
+    left:-22px;
+    border: 20px solid transparent;
+    border-left:20px solid #1475b8;
+    z-index:1;
+}
+.about-us-gallery .arrow-left{
+    width:0;
+    height: 0;
+    position:absolute;
+    top:50%;
+    left:10px;
+    margin-top:-20px;
+    border: 20px solid transparent;
+    border-right:20px solid white;
+    z-index:1;
+}
+.about-us-gallery .arrow-left:before{
+    content:"";
+    width:0;
+    height: 0;
+    position: absolute;
+    top:-20px;
+    left:-18px;
+    border: 20px solid transparent;
+    border-right:20px solid #1475b8;
+    z-index:1;
+}
+.about-us-gallery .arrows::after{
+    content: "";
+    width: 60px;
+    height: 60px;
+    background:#1475b8;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top:-30px;
+    left:-30px;
+    z-index:3;
+}
 /*Услуги*/
 
 .services {
@@ -413,23 +468,21 @@ h2::before {
 .work-scheme {
     padding-top: 50px;
 }
-.work-scheme h2{
 
-}
 .work-scheme .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid #1475b8;
+    border: 2px solid #1475b8;
 }
 
 .work-scheme .steps-item {
     position: relative;
-    width: 33.33%;
+    flex-basis:33.334%;
+    flex-grow:1;
     text-align: center;
-    border: 1px solid #1475b8;
-    padding-top: 75px;
-    padding-bottom:35px;
+    border: 2px solid #1475b8;
+    padding: 45px 40px;
     box-sizing: border-box;
 }
 
@@ -440,9 +493,7 @@ h2::before {
     margin-bottom:35px;
 }
 .steps-item p{
-    margin:0 auto;
-    width:400px;
-    height: 140px;
+    margin:0;
 }
 .steps-item .step-1 {
     background: url(/img/distance.png) center no-repeat;
@@ -471,48 +522,44 @@ h2::before {
     width: 0;
     height: 0;
     position: absolute;
-    top: 140px;
-    left: 466px;
-    border-bottom: 60px solid #fff;
-    border-right: 60px solid #fff;
-    border-left: 60px solid #1475b8;
-    border-top:  60px solid #fff;
+    top: 50%;
+    right: -70px;
+    margin-top:-35px;
+    border: 35px solid transparent;
+    border-left: 35px solid #1475b8;
 }
 .work-scheme .triangle-right:before {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
-    top: -60px;
-    left: -64px;
-    border-bottom: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-left: 60px solid #fff;
-    border-top:  60px solid transparent;
+    top: -35px;
+    left: -39px;
+    border: 35px solid transparent;
+    border-left: 35px solid #fff;
+    z-index:1;
 
 }
 .work-scheme .triangle-down {
     width: 0;
     height: 0;
     position: absolute;
-    top: 392px;
-    left: 180px;
-    border-bottom: 60px solid #fff;
-    border-right: 60px solid #fff;
-    border-left: 60px solid #fff;
-    border-top:  60px solid #1475b8;
+    bottom:-70px;
+    left: 50%;
+    margin-left:-35px;
+    border: 35px solid transparent;
+    border-top:  35px solid #1475b8;
 }
 .work-scheme .triangle-down:before {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
-    top: -64px;
-    left: -60px;
-    border-bottom: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-left: 60px solid transparent;
-    border-top:  60px solid #fff;
+    bottom: -31px;
+    left: -35px;
+    border: 35px solid transparent;
+    border-top:  35px solid #fff;
+    z-index:1;
 
 }
 
@@ -520,94 +567,23 @@ h2::before {
     width: 0;
     height: 0;
     position: absolute;
-    top: 140px;
-    left: 344px;
-    border-bottom: 60px solid transparent;
-    border-right: 60px solid #1475b8;
-    border-left: 60px solid transparent;
-    border-top:  60px solid transparent;
+    top: 50%;
+    left: -70px;
+    margin-top:-35px;
+    border: 35px solid transparent;
+    border-right: 35px solid #1475b8;
 }
 .work-scheme .triangle-left:before {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
-    top: -60px;
-    left: -56px;
-    border-bottom: 60px solid transparent;
-    border-right: 60px solid #fff;
-    border-left: 60px solid transparent;
-    border-top:  60px solid transparent;
-
-}
-/*Triangle
-
-.work-scheme .triangle:before {
-    content: '';
-    width: 40px;
-    display: block;
-    position: absolute;
-    top: 12px;
-    left: -5px;
-    border-top: 2px solid #1475b8;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-
+    top: -35px;
+    left: -31px;
+    border: 35px solid transparent;
+    border-right: 35px solid #fff;
 }
 
-.work-scheme .triangle:after {
-    content: '';
-    width: 40px;
-    display: block;
-    position: absolute;
-    top: 39px;
-    left: -5px;
-    border-top: 2px solid #1475b8;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-
-}
-
-.work-scheme .item-3 .triangle {
-    top: 240px;
-    left: 205px;
-    border-right: 53px solid #fff;
-}
-
-.work-scheme .item-3 .triangle::before {
-    top: 59px;
-    left: 20px;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-
-.work-scheme .item-3 .triangle::after {
-    top: 59px;
-    left: -7px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.work-scheme .item-reverse .triangle {
-    top: 90px;
-    right: 50px;
-    border-right: 30px solid #fff;
-}
-
-.work-scheme .item-reverse .triangle::before {
-    top: 39px;
-    left: -33px;
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
-}
-
-.work-scheme .item-reverse .triangle::after {
-    top: 12px;
-    left: -33px;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-*/
 /*Форма*/
 
 .connection-form {
