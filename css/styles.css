@@ -22,7 +22,7 @@ h2 {
     color: #01406c;
     margin-bottom: 50px;
     text-align: center;
-    margin-top: 0;
+    margin-top:0;
 }
 
 h2::before {
@@ -129,7 +129,6 @@ h2::before {
 .site-nav ul {
     display: flex;
     flex-direction: row;
-
     padding: 10px 0;
     justify-content: center;
     margin: 0;
@@ -346,7 +345,6 @@ h2::before {
 
 .advantages h2 {
     color: white;
-    margin-top: 0;
     margin-bottom: 50px;
 
 }
@@ -410,19 +408,19 @@ h2::before {
     color: white;
 }
 
-*/Схема работы*/
+/*Схема работы*/
 
 .work-scheme {
     padding-top: 50px;
+}
+.work-scheme h2{
 
 }
-
 .work-scheme .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border: 1px solid #1475b8;
-
 }
 
 .work-scheme .steps-item {
@@ -430,7 +428,8 @@ h2::before {
     width: 33.33%;
     text-align: center;
     border: 1px solid #1475b8;
-    padding-top: 40px;
+    padding-top: 75px;
+    padding-bottom:35px;
     box-sizing: border-box;
 }
 
@@ -438,9 +437,13 @@ h2::before {
     display: inline-block;
     width: 100px;
     height: 100px;
-
+    margin-bottom:35px;
 }
-
+.steps-item p{
+    margin:0 auto;
+    width:400px;
+    height: 140px;
+}
 .steps-item .step-1 {
     background: url(/img/distance.png) center no-repeat;
 }
@@ -464,21 +467,80 @@ h2::before {
 .steps-item .step-6 {
     background: url(/img/idea.png) center no-repeat;
 }
-
-/*Triangle*/
-
-.work-scheme .triangle {
+.work-scheme .triangle-right {
     width: 0;
     height: 0;
-    display: block;
     position: absolute;
-    z-index: 1;
-    top: 120px;
-    left: 464px;
-    border-bottom: 53px solid #fff;
-    border-right: 30px solid #fff;
+    top: 140px;
+    left: 466px;
+    border-bottom: 60px solid #fff;
+    border-right: 60px solid #fff;
+    border-left: 60px solid #1475b8;
+    border-top:  60px solid #fff;
+}
+.work-scheme .triangle-right:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -60px;
+    left: -64px;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-left: 60px solid #fff;
+    border-top:  60px solid transparent;
 
 }
+.work-scheme .triangle-down {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 392px;
+    left: 180px;
+    border-bottom: 60px solid #fff;
+    border-right: 60px solid #fff;
+    border-left: 60px solid #fff;
+    border-top:  60px solid #1475b8;
+}
+.work-scheme .triangle-down:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -64px;
+    left: -60px;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-top:  60px solid #fff;
+
+}
+
+.work-scheme .triangle-left {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 140px;
+    left: 344px;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid #1475b8;
+    border-left: 60px solid transparent;
+    border-top:  60px solid transparent;
+}
+.work-scheme .triangle-left:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -60px;
+    left: -56px;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid #fff;
+    border-left: 60px solid transparent;
+    border-top:  60px solid transparent;
+
+}
+/*Triangle
 
 .work-scheme .triangle:before {
     content: '';
@@ -545,7 +607,7 @@ h2::before {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
 }
-
+*/
 /*Форма*/
 
 .connection-form {
