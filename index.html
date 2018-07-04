@@ -81,7 +81,7 @@
         <section class="services layout-fixed">
             <h2 id="services">Услуги</h2>
             <div class="services-content">
-                <input type="radio" name="services-slider" id="serv-btn-1">
+                <input type="radio" name="services-slider" id="serv-btn-1" checked>
                 <input type="radio" name="services-slider" id="serv-btn-2">
                 <ul class="services-btn">
                     <li>
@@ -92,16 +92,24 @@
                     </li>
                 </ul>
                 <div class="srv-slides-container">
-                    <section class="services-item transport" id="services-transport">
-                        <img src="img/2092.jpg" width="750" height="440">
-                        <img src="img/gallery-1.jpg" width="750" height="440">
-                        <img src="img/gallery-6.jpg" width="750" height="440">
-                    </section>
-                    <section class="services-item recycling" id="services-recycling">
-                        <img src="img/gallery-2.jpg" width="750" height="440">
-                        <img src="img/gallery-3.jpg" width="750" height="440">
-                        <img src="img/gallery-4.jpg" width="750" height="440">
-                    </section>
+                    <input type="radio" name="switch" id="slide-btn-1" checked>
+                    <input type="radio" name="switch" id="slide-btn-2">
+                    <input type="radio" name="switch" id="slide-btn-3">
+                    <div class="slider-controls">
+                        <label for="slide-btn-1"></label>
+                        <label for="slide-btn-2"></label>
+                        <label for="slide-btn-3"></label>
+                    </div>
+                        <section class="services-item transport" id="services-transport">
+                            <img src="img/2092.jpg" width="750" height="440">
+                            <img src="img/gallery-1.jpg" width="750" height="440">
+                            <img src="img/gallery-6.jpg" width="750" height="440">
+                        </section>
+                        <section class="services-item recycling" id="services-recycling">
+                            <img src="img/gallery-2.jpg" width="750" height="440">
+                            <img src="img/gallery-3.jpg" width="750" height="440">
+                            <img src="img/gallery-4.jpg" width="750" height="440">
+                        </section>
                     <div class="linear-gradient"></div>
                 </div>
             </div>
@@ -203,11 +211,12 @@
                     </div>
                 </div>
             </div>
-            <a class="contacts-map" href="img/map-big.jpg">
+            <div class="contacts-map">
                 <div class="layout-fixed">
-                    <img src="img/map.jpg" alt="г. Москва, ул Строителей, 15" width="1400" height="350" />
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CBuJINq48B" width="1400" height="350" frameborder="1" allowfullscreen="true"></iframe>
+                    <img src="img/map.jpg" alt="Республика Казахстан, ЗКО, г. Аксай, 5 микрорайон, дом 5" width="1400" height="350" />
                 </div>
-            </a>
+            </div>
         </section>
     </main>
     <footer class="main-footer layout-fixed">
@@ -219,11 +228,11 @@
         </div>
         <nav class="footer-nav">
             <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Преимущества</a></li>
-                <li><a href="#">Схема работы</a></li>
-                <li><a href="#">Контакты</a></li>
+                 <li><a href="#about-us">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#scheme">Схема работы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
     </footer>

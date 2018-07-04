@@ -9,5 +9,5 @@ function initSlider(slideSelector, interval){
         slides[currentSlide].className = 'slide showing';
     }
 }
-initSlider('#slides .slide', 15000);
-initSlider('#top-slides .slide', 4000);
+initSlider('#slides .slide', 4000);
+initSlider('#top-slides .slide', 10000);
