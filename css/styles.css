@@ -263,73 +263,6 @@ list-style-type: none;
 .about-us .slide:nth-of-type(5){
     background: url(/img/gallery-5.jpg);
 }
-/*
-.about-us-gallery .arrow-right{
-    width:0;
-    height: 0;
-    position: absolute;
-    top:50%;
-    right:-5px;
-    margin-top:-20px;
-    border: 20px solid transparent;
-    border-left:20px solid white;
-    z-index:1;
-}
-
-.about-us-gallery .arrow-right:before{
-    content:"";
-    width:0;
-    height: 0;
-    position: absolute;
-    top:-20px;
-    left:-22px;
-    border: 20px solid transparent;
-    border-left:20px solid #1475b8;
-    z-index:3;
-}
-
-.about-us-gallery .left-circle{
-    left:20px;
-}
- .about-us-gallery .right-circle{
-    right:20px;
-}
-.about-us-gallery .arrow-left{
-    width:0;
-    height: 0;
-    position:absolute;
-    top:50%;
-    left:-5px;
-    margin-top:-20px;
-    border: 20px solid transparent;
-    border-right:20px solid white;
-    z-index:1;
-}
-.about-us-gallery .arrow-left:before{
-    content:"";
-    width:0;
-    height: 0;
-    position: absolute;
-    top:-20px;
-    left:-18px;
-    border: 20px solid transparent;
-    border-right:20px solid #1475b8;
-    z-index:1;
-}
-.about-us-gallery .circle{
-    width:0px;
-    height: 0px;
-    display: block;
-    position: absolute;
-    top:50%;
-    padding:30px;
-    margin-top:-20px;
-    border:2px solid #1475b8;
-    background:#1475b8;
-    border-radius: 50%;
-}
-*/
-
 
 /*Услуги*/
 
@@ -358,55 +291,79 @@ list-style-type: none;
     margin-top: 110px;
 }
 
-.services-btn li {
-    position: relative;
-    width: 367px;
+.services-btn li{
     list-style: none;
     margin-bottom: 25px;
+}
+
+.services-btn li label{
+    display:block;
+    position: relative;
+    width: 367px;
+    cursor:pointer;
     border: 5px solid #b2b2b2;
     margin: 0;
     box-sizing: border-box;
     padding: 35px 0;
     font-family: "Roboto";
+    font-weight: 300;
+    font-size:24px;
     text-align: center;
     text-transform: uppercase;
     line-height: 20px;
-
 }
 
-.services-btn li:hover {
-    border: 5px solid #01406c;
+.services-btn li label:hover {
+    border-color: #01406c;
     background: #1475b8;
     color: white;
+    font-weight: 400;
 }
 
+.services-content #serv-btn-1:checked~ .services-btn label[for=serv-btn-1],
+.services-content #serv-btn-2:checked~ .services-btn label[for=serv-btn-2]{
+    color:white;
+    background:#1475b8;
+    border-color: #01406c;
+}
 .services-btn li:nth-child(1) {
     margin-bottom: 120px;
 }
 
-.services-btn input[type="radio"] {
+.services-content input[type="radio"] {
     display: none;
 }
 
 .srv-slides-container {
-    width: 1000px;
+    position: relative;
+    width: 200%;
     height: 440px;
     margin-left: 40px;
     margin-top: 50px;
-    background: #01406c;
-    background-image: url(/img/2092.jpg);
+    background-color: #01406c;
+}
+.srv-slides-container .services-item{
+    display:none;
+    width:750px;
+    height:440px;
     background-repeat: no-repeat;
-    background-position: right;
-
+    position: absolute;
+    margin-left:250px;
 }
 
 .srv-slides-container .linear-gradient {
     width: 570px;
     height: 440px;
     background-image: linear-gradient(105deg, rgba(20, 117, 184, 0) 20%, rgb(20, 117, 184) 20%, rgb(20, 117, 184) 45%, rgba(20, 117, 184, 0.6) 45%, rgba(20, 117, 184, 0.6) 70%, rgba(20, 117, 184, 0) 70%, rgba(20, 117, 184, 0) 100%);
-    background-position: 95px 0;
+    position: absolute;
+    top:0;
+    left:60px;
+    background-repeat: no-repeat;
 }
-
+#serv-btn-1:checked~.srv-slides-container .transport,
+#serv-btn-2:checked~.srv-slides-container .recycling{
+    display:block;
+}
 /*Преимущества*/
 
 .advantages {

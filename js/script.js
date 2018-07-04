@@ -1,9 +1,13 @@
-var slides = document.querySelectorAll('#slides .slide, #top-slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,3000);
+function initSlider(slideSelector, interval){
+    var slides = document.querySelectorAll(slideSelector);
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide, interval);
 
-function nextSlide() {
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].className = 'slide showing';
+    function nextSlide() {
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
 }
+initSlider('#slides .slide', 15000);
+initSlider('#top-slides .slide', 4000);
