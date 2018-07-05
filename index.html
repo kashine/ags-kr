@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Astana-Global-Stroy-KR</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,23 +37,24 @@
             </ul>
         </nav>
         <section class="top-slider">
+            <h2 class="visually-hidden">Верхний слайдер</h2>
             <div class="layout-fixed">
                 <div class="slider-inner">
                     <ul class="top-slides" id="top-slides">
                         <li class="slide showing">
                             <p class="lead">Наша задача повысить эффективность процессов транспортировки и распределения грузов.</p>
                             <div class="linear-gradient"></div>
-                            <img src="img/2090.jpg" width="960" height="330">
+                            <img src="img/2090.jpg" width="960" height="330" alt="Слайд_1">
                         </li>
                         <li class="slide slide-2" id="second">
                             <p class="lead">Для нас важнейшей целью в работе с клиентом является построение партнерских отношений на взаимовыгодных условиях.</p>
                             <div class="linear-gradient"></div>
-                            <img src="img/2089.jpg" width="960" height="330">
+                            <img src="img/2089.jpg" width="960" height="330" alt="Слайд_2">
                         </li>
                         <li class="slide slide-3" id="third">
                             <p class="lead">"AGS-KR" - это современные экологически безопасные технологии и оборудования для работы с отходами</p>
                             <div class="linear-gradient"></div>
-                            <img src="img/2091.jpg" width="960" height="330">
+                            <img src="img/2091.jpg" width="960" height="330" alt="Слайд_3">
                         </li>
                     </ul>
 
@@ -100,16 +101,16 @@
                         <label for="slide-btn-2"></label>
                         <label for="slide-btn-3"></label>
                     </div>
-                        <section class="services-item transport" id="services-transport">
-                            <img src="img/2092.jpg" width="750" height="440">
-                            <img src="img/gallery-1.jpg" width="750" height="440">
-                            <img src="img/gallery-6.jpg" width="750" height="440">
-                        </section>
-                        <section class="services-item recycling" id="services-recycling">
-                            <img src="img/gallery-2.jpg" width="750" height="440">
-                            <img src="img/gallery-3.jpg" width="750" height="440">
-                            <img src="img/gallery-4.jpg" width="750" height="440">
-                        </section>
+                    <div class="services-item transport" id="services-transport">
+                        <img src="img/2092.jpg" width="750" height="440" alt="фото галереи 1">
+                        <img src="img/gallery-1.jpg" width="750" height="440" alt="фото галереи 2">
+                        <img src="img/gallery-6.jpg" width="750" height="440" alt="фото галереи 3">
+                    </div>
+                    <div class="services-item recycling" id="services-recycling">
+                        <img src="img/gallery-2.jpg" width="750" height="440" alt="фото галереи 4">
+                        <img src="img/gallery-3.jpg" width="750" height="440" alt="фото галереи 5">
+                        <img src="img/gallery-4.jpg" width="750" height="440" alt="фото галереи 6">
+                    </div>
                     <div class="linear-gradient"></div>
                 </div>
             </div>
@@ -179,7 +180,7 @@
                         <input class="modal-input " type="text" name="user-name" id="user-name-id" placeholder="Ваше имя">
                     </label>
                     <label for="user-phone-id">
-                        <input class="modal-input" type="phone" name="phone" id="user-phone-id" placeholder="Телефон">
+                        <input class="modal-input" type="tel" name="phone" id="user-phone-id" placeholder="Телефон">
                     </label>
                     <label for="where-id">
                         <input class="modal-input input-3" type="text" name="where" id="where-id" placeholder="Куда">
@@ -213,7 +214,7 @@
             </div>
             <div class="contacts-map">
                 <div class="layout-fixed">
-                    <iframe src="https://yandex.ru/map-widget/v1/-/CBuJINq48B" width="1400" height="350" frameborder="1" allowfullscreen="true"></iframe>
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CBuJINq48B" width="1400" height="350"></iframe>
                     <img src="img/map.jpg" alt="Республика Казахстан, ЗКО, г. Аксай, 5 микрорайон, дом 5" width="1400" height="350" />
                 </div>
             </div>
@@ -228,7 +229,7 @@
         </div>
         <nav class="footer-nav">
             <ul>
-                 <li><a href="#about-us">О нас</a></li>
+                <li><a href="#about-us">О нас</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#advantages">Преимущества</a></li>
                 <li><a href="#scheme">Схема работы</a></li>
@@ -236,7 +237,7 @@
             </ul>
         </nav>
     </footer>
-  <script src="/js/script.js"></script>
+    <script src="/js/script.min.js"></script>
 </body>
 
 </html>
