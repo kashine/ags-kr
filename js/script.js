@@ -11,3 +11,4 @@ function initSlider(slideSelector, interval){
 }
 initSlider('#slides .slide', 4000);
 initSlider('#top-slides .slide', 10000);
+

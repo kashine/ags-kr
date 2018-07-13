@@ -6,7 +6,7 @@
     <title>Astana-Global-Stroy-KR</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/styles.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         </div>
     </header>
     <main>
-        <nav class="site-nav">
+        <nav class="site-nav" id="header">
             <ul>
                 <li><a href="#about-us">О нас</a></li>
                 <li><a href="#services">Услуги</a></li>
@@ -102,14 +102,32 @@
                         <label for="slide-btn-3"></label>
                     </div>
                     <div class="services-item transport" id="services-transport">
-                        <img src="img/2092.jpg" width="750" height="440" alt="фото галереи 1">
-                        <img src="img/gallery-1.jpg" width="750" height="440" alt="фото галереи 2">
-                        <img src="img/gallery-6.jpg" width="750" height="440" alt="фото галереи 3">
+                        <div>
+                            <p>Аренда спецтехники</p>
+                            <img src="img/2092.jpg" width="750" height="440" alt="фото галереи 1">
+                        </div>
+                        <div>
+                            <p>Международные перевозки</p>
+                            <img src="img/gallery-1.jpg" width="750" height="440" alt="фото галереи 2">
+                        </div>
+                        <div>
+                            <p>Перевозка сыпучих грузов</p>
+                            <img src="img/gallery-6.jpg" width="750" height="440" alt="фото галереи 3">
+                        </div>
                     </div>
                     <div class="services-item recycling" id="services-recycling">
-                        <img src="img/gallery-2.jpg" width="750" height="440" alt="фото галереи 4">
-                        <img src="img/gallery-3.jpg" width="750" height="440" alt="фото галереи 5">
-                        <img src="img/gallery-4.jpg" width="750" height="440" alt="фото галереи 6">
+                        <div>
+                            <p>Евроконтейнеры</p>
+                            <img src="img/gallery-2.jpg" width="750" height="440" alt="фото галереи 4">
+                        </div>
+                        <div>
+                            <p>Вывоз ТБО</p>
+                            <img src="img/gallery-3.jpg" width="750" height="440" alt="фото галереи 5">
+                        </div>
+                        <div>
+                            <p>Вывоз промышленных отходов</p>
+                            <img src="img/gallery-4.jpg" width="750" height="440" alt="фото галереи 6">
+                        </div>
                     </div>
                     <div class="linear-gradient"></div>
                 </div>
@@ -237,7 +255,21 @@
             </ul>
         </nav>
     </footer>
-    <script src="/js/script.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/jаvascript"></script>
+    <script type="text/jаvascript">
+        $(document).ready(function(){
+            var HeaderTop = $('#header').offset().top;
+
+            $(window).scroll(function(){
+                    if( $(window).scrollTop() > HeaderTop ) {
+                            $('#header').css({position: 'fixed', top: '0px'});
+                    } else {
+                            $('#header').css({position: 'static'});
+                    }
+            });
+        });
+    </script>
 </body>
 
 </html>

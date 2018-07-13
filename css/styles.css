@@ -57,8 +57,7 @@ h2::before {
     font-size: 14px;
     padding-top: 10px;
     padding-bottom: 10px;
-    position: fixed;
-    top:0;
+
     width:100%;
     background-color:white;
     z-index:10;
@@ -158,10 +157,9 @@ h2::before {
 .site-nav {
     background: #535353;
     font-size: 16px;
-    position: fixed;
+
     width:100%;
     z-index: 10;
-    top:101px;
 
 }
 
@@ -196,7 +194,7 @@ h2::before {
 
 .top-slider {
     background-color: #01406c;
-     margin-top:150px;
+
 }
 
 .top-slides {
@@ -348,7 +346,7 @@ h2::before {
     height: 540px;
     position: absolute;
     background: #01406c;
-    left: 360px;
+    left: 353px;
 }
 
 .services-btn {
@@ -365,7 +363,7 @@ h2::before {
 .services-btn li label {
     display: block;
     position: relative;
-    width: 367px;
+    width: 360px;
     cursor: pointer;
     border: 5px solid #b2b2b2;
     margin: 0;
@@ -495,7 +493,8 @@ h2::before {
 
 .srv-slides-container .services-item {}
 
-.srv-slides-container .services-item img {
+.srv-slides-container .services-item div {
+    position: relative;
     float: left;
 }
 
@@ -516,7 +515,22 @@ h2::before {
     -ms-transform: translate(-1500px);
     transform: translate(-1500px);
 }
-
+.services-item p{
+    width:100%;
+    color:white;
+    font-family: 'Open sans',sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.19em;
+    margin:0;
+    padding: 10px;
+    right:0;
+    position: absolute;
+    z-index: 100;
+    text-align: right;
+    background:#01406c;
+    box-sizing: border-box;
+}
 /*Преимущества*/
 
 .advantages {
