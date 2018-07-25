@@ -264,9 +264,15 @@ h2::before {
 }
 
 .about-us .about-us-text {
-    width: 740px;
-    margin: 0 0 35px 0;
+    width: 580px;
+    font-size: 18px;
     font-family: "Open Sans", sans-serif;
+}
+
+.about-us .about-us-text p {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 #slides {
@@ -285,7 +291,6 @@ h2::before {
     height: 100%;
     opacity: 0;
     z-index: 1;
-
     -webkit-transition: opacity 1s;
     -o-transition: opacity 1s;
     transition: opacity 1s;
@@ -297,8 +302,8 @@ h2::before {
 }
 
 .about-us .slide {
-    width: 630px;
-    height: 430px;
+    width: 600px;
+    height: 400px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: #01406c solid 10px;
@@ -344,7 +349,7 @@ h2::before {
     height: 540px;
     position: absolute;
     background: #01406c;
-    left: 353px;
+    left: 246px;
 }
 
 .services-btn {
@@ -361,13 +366,13 @@ h2::before {
 .services-btn li label {
     display: block;
     position: relative;
-    width: 360px;
+    width: 250px;
     cursor: pointer;
     border: 5px solid #b2b2b2;
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 35px 0;
+    padding: 25px 0;
     font-family: "Roboto", "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 24px;
@@ -414,7 +419,7 @@ h2::before {
     height: 440px;
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 250px;
+    margin-left: 190px;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: transform 0.3s ease;
@@ -428,26 +433,26 @@ h2::before {
     background-image: -webkit-linear-gradient(345deg,
     rgba(1, 64, 108, 1) 25%,
     rgb(20, 117, 184) 25%,
-    rgb(20, 117, 184) 50%,
-    rgba(20, 117, 184, 0.6) 50%,
-    rgba(20, 117, 184, 0.6) 75%,
-    rgba(20, 117, 184, 0) 75%,
+    rgb(20, 117, 184) 45%,
+    rgba(20, 117, 184, 0.6) 45%,
+    rgba(20, 117, 184, 0.6) 65%,
+    rgba(20, 117, 184, 0) 65%,
     rgba(20, 117, 184, 0) 100%);
     background-image: -o-linear-gradient(345deg,
     rgba(1, 64, 108, 1) 25%,
     rgb(20, 117, 184) 25%,
-    rgb(20, 117, 184) 50%,
-    rgba(20, 117, 184, 0.6) 50%,
-    rgba(20, 117, 184, 0.6) 75%,
-    rgba(20, 117, 184, 0) 75%,
+    rgb(20, 117, 184) 45%,
+    rgba(20, 117, 184, 0.6) 45%,
+    rgba(20, 117, 184, 0.6) 65%,
+    rgba(20, 117, 184, 0) 65%,
     rgba(20, 117, 184, 0) 100%);
     background-image: linear-gradient(105deg,
     rgba(1, 64, 108, 1) 25%,
     rgb(20, 117, 184) 25%,
-    rgb(20, 117, 184) 50%,
-    rgba(20, 117, 184, 0.6) 50%,
-    rgba(20, 117, 184, 0.6) 75%,
-    rgba(20, 117, 184, 0) 75%,
+    rgb(20, 117, 184) 45%,
+    rgba(20, 117, 184, 0.6) 45%,
+    rgba(20, 117, 184, 0.6) 65%,
+    rgba(20, 117, 184, 0) 65%,
     rgba(20, 117, 184, 0) 100%);
     position: absolute;
     top: 0;
@@ -518,11 +523,11 @@ h2::before {
     width: 100%;
     color: white;
     font-family: 'Open sans', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.19em;
     margin: 0;
-    padding: 10px;
+    padding: 10px 40px 10px 10px;
     right: 0;
     position: absolute;
     z-index: 100;
@@ -629,8 +634,8 @@ h2::before {
 
 .work-scheme .steps-item {
     position: relative;
-    -ms-flex-preferred-size: 33.334%;
-    flex-basis: 33.334%;
+    -ms-flex-preferred-size: 33.3%;
+    flex-basis: 33.3%;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
@@ -643,37 +648,44 @@ h2::before {
 
 .steps-item span {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 35px;
 }
 
 .steps-item p {
     margin: 0;
+    font-size: 18px;
 }
 
 .steps-item .step-1 {
     background: url(/img/distance.png) center no-repeat;
+    background-size: 70px 70px;
 }
 
 .steps-item .step-2 {
     background: url(/img/tech.png) center no-repeat;
+    background-size: 70px 70px;
 }
 
 .steps-item .step-3 {
     background: url(/img/money.png) center no-repeat;
+    background-size: 70px 70px;
 }
 
 .steps-item .step-4 {
     background: url(/img/handshake.png) center no-repeat;
+    background-size: 70px 70px;
 }
 
 .steps-item .step-5 {
     background: url(/img/contract.png) center no-repeat;
+    background-size: 70px 70px;
 }
 
 .steps-item .step-6 {
     background: url(/img/idea.png) center no-repeat;
+    background-size: 70px 70px;
 }
 
 .work-scheme .triangle-right {
@@ -821,9 +833,9 @@ h2::before {
 .connection-form .form-description {
     margin: 0;
     font-family: "Roboto", "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 42px;
 }
 
 .personal-data input {
@@ -870,6 +882,11 @@ h2::before {
 
 .contacts .work-time {
     background-image: url(/img/clock.png);
+}
+
+.contacts .phone-email {
+    width: 210px;
+    padding-left: 100px;
 }
 
 .contacts .phone {
